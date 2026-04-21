@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- SEO -->
+  <title>Nepal Trip · Digital Brochure</title>
+  <meta name="description" content="Scroll through our Nepal trip brochure — stunning full-screen pages you can download and print." />
+  <meta property="og:title"       content="Nepal Trip · Digital Brochure" />
+  <meta property="og:description" content="Stunning full-screen travel brochure." />
+  <meta property="og:type"        content="website" />
+
+  <!-- Favicon (inline emoji) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       SLIDE CONTAINER  — slides injected by script.js
+       ═══════════════════════════════════════════════ -->
+  <main id="slideshow" role="main" aria-label="Brochure slides"></main>
+
+  <!-- ═══════════════════════════════════════════════
+       UI OVERLAY
+       ═══════════════════════════════════════════════ -->
+  <div id="ui-overlay" aria-hidden="true">
+
+    <!-- Slide counter (top-center) -->
+    <div id="slide-counter" role="status" aria-live="polite">1 / 1</div>
+
+    <!-- Top-right controls -->
+    <div id="top-controls">
+      <!-- Download current slide -->
+      <button id="btn-download" class="btn" title="Download this page" aria-label="Download current page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        <span>Download</span>
+      </button>
+
+      <!-- Print all slides -->
+      <button id="btn-print" class="btn" title="Print all pages" aria-label="Print all pages">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 6 2 18 2 18 9"/>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+          <rect x="6" y="14" width="12" height="8"/>
+        </svg>
+        <span>Print</span>
+      </button>
+    </div>
+
+    <!-- Dot navigation (right side) -->
+    <nav id="dots" role="navigation" aria-label="Slide navigation dots"></nav>
+
+    <!-- Prev / Next buttons (bottom-center) -->
+    <div id="nav-btns" role="navigation" aria-label="Previous / Next slide">
+      <button id="btn-prev" class="btn btn-icon" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+
+      <button id="btn-next" class="btn btn-icon" aria-label="Next slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Scroll hint (disappears after a few seconds) -->
+    <div id="scroll-hint" aria-hidden="true">
+      <span>Scroll to navigate</span>
+      <div class="chevron"></div>
+    </div>
+
+  </div><!-- /#ui-overlay -->
+
+  <!-- Toast notification -->
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
